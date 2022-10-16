@@ -227,7 +227,7 @@ ul {
   overflow: hidden;
   border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   margin: -1px;
 }
@@ -240,9 +240,10 @@ ul {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+
 .features-text {
   font-size: 14px;
-  line-height: 1.71x;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
