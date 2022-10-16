@@ -16,7 +16,6 @@
   --social-icon-color: #afb1b8;
   --footer-item-background: rgba(255, 255, 255, 0.1);
   --works--item-background: rgba(47, 48, 58, 0.8);
-  --card-description-background: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -57,11 +56,9 @@ ul {
 }
 
 .header {
-  width: 100%;
   position: fixed;
+  width: 100%;
   top: 0%;
-  right: 50%;
-  transform: translate(50%);
   z-index: 2;
   background-color: var(--main-background-color);
   border-bottom: 1px solid var(--header-border-color);
@@ -149,7 +146,7 @@ ul {
 .current::after {
   position: absolute;
   content: '';
-  bottom: 0%;
+  bottom: -1px;
   left: 0%;
   width: 100%;
   height: 4px;
@@ -513,8 +510,9 @@ ul {
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
+  opacity: 0.9;
   color: var(--main-background-color);
-  background-color: var(--card-description-background);
+  background-color: var(--accent-text-color);
 }
 
 .card-link {
