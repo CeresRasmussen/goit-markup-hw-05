@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Портфоліо</title>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <a href="./index.html" class="header-logo" lang="en"
+            ><span class="logo-web">Web</span>Studio</a
+          >
+          <ul class="site-nav-list">
+            <li class="site-nav-item">
+              <a href="./index.html" class="site-nav-link">Студія</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="./portfolio.html" class="site-nav-link current">Портфоліо</a>
+            </li>
+            <li class="site-nav-item"><a href="#" class="site-nav-link">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contacts">
+          <li class="contacts-item">
+            <a href="mailto:info@devstudio.com" class="contacts-link">
+              <svg class="contacts-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-item">
+            <a href="tel:+380961111111" class="contacts-link"
+              ><svg class="contacts-icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main content -->
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="visually-hidden">Наші роботи</h1>
+          <ul class="filters-list">
+            <li class="filters-item"><button type="button" class="filter-button">Усі</button></li>
+            <li class="filters-item">
+              <button type="button" class="filter-button">Веб-сайти</button>
+            </li>
+            <li class="filters-item">
+              <button type="button" class="filter-button">Додатки</button>
+            </li>
+            <li class="filters-item">
+              <button type="button" class="filter-button">Дизайн</button>
+            </li>
+            <li class="filters-item">
+              <button type="button" class="filter-button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="card-list">
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/notebook-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="На екрані ноутбука зображено веб-сторінку із трьома людьми"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Технокряк</h2>
+                  <p class="card-text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/poster-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Дизайн баскетбольного постера 'Новий Орлеан проти Золотої Зірки'"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Постер New Orlean vs Golden Star</h2>
+                  <p class="card-text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/restoran-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Додаток ресторана морських продуктів"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Ресторан Seafood</h2>
+                  <p class="card-text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/headphones-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Зображення навушників"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Проєкт Prime</h2>
+                  <p class="card-text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/boxes-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Зображення двох коробок різного розміру"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Проєкт Boxes</h2>
+                  <p class="card-text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/desktop-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Зображення монітора"
+                />
+                <div class="card-info">
+                  <h2 class="card-title" lang="en">Inspiration has no Borders</h2>
+                  <p class="card-text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/book-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Книга із зображеннями"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Видання Limited Edition</h2>
+                  <p class="card-text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/label-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Зображення етикетки"
+                />
+                <div class="card-info">
+                  <h2 class="card-title">Проєкт LAB</h2>
+                  <p class="card-text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-item">
+              <a href="#" class="card-link">
+                <img
+                  src="./images/notepad-img.jpg"
+                  width="370"
+                  height="294"
+                  alt="Зображення додатка із бізнес сфери"
+                />
+                <div class="card-info">
+                  <h2 class="card-title" lang="en">Growing Business</h2>
+                  <p class="card-text">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="address">
+          <a href="./index.html" class="footer-logo" lang="en"
+            ><span class="logo-web">Web</span>Studio</a
+          >
+          <address>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a
+                  href="https://goo.gl/maps/iYs7ogVhemWYZAT48"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  class="footer-link local"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="footer-item">
+                <a href="mailto:info@devstudio.com" class="footer-link">info@devstudio.com</a>
+              </li>
+              <li class="footer-item">
+                <a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
+          <h2 class="footer-social-title">Приєднуйтесь</h2>
+          <ul class="footer-social-list">
+            <li>
+              <a class="footer-social-item" href="#"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="footer-social-item" href="#"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="footer-social-item" href="#"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="footer-social-item" href="#"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
