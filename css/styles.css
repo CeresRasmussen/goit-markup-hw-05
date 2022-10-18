@@ -15,7 +15,8 @@
   --icon-background-color: #f5f4fa;
   --social-icon-color: #afb1b8;
   --footer-item-background: rgba(255, 255, 255, 0.1);
-  --works--item-background: rgba(47, 48, 58, 0.8);
+  --works-item-background: rgba(47, 48, 58, 0.8);
+  --main-animation-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -105,6 +106,7 @@ ul {
 
 .site-nav-link,
 .contacts-link {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -115,6 +117,10 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .contacts {
@@ -132,6 +138,28 @@ ul {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-text-color);
+}
+
+.site-nav-link::before,
+.site-nav-link::before {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 0%;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-text-color);
+
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
+}
+
+.site-nav-link:hover::before,
+.site-nav-link:focus::before {
+  transform: scale(1);
 }
 
 .contacts-icon {
@@ -202,6 +230,10 @@ ul {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .hero-button:hover,
@@ -293,7 +325,7 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-background-color);
-  background: rgba(47, 48, 58, 0.8);
+  background: var(--works-item-background);
 }
 
 .team {
@@ -350,6 +382,10 @@ ul {
   width: 44px;
   border-radius: 50%;
   fill: var(--social-icon-color);
+
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 .social-item:hover,
 .social-item:focus {
@@ -371,6 +407,10 @@ ul {
   border: 1px solid var(--social-icon-color);
   border-radius: 4px;
   fill: var(--social-icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .clients-item:hover,
@@ -413,6 +453,10 @@ ul {
 .footer-link {
   color: var(--footer-address-link);
   font-style: normal;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .footer-link:hover,
@@ -450,11 +494,84 @@ ul {
   border-radius: 50%;
   background-color: var(--footer-item-background);
   fill: var(--main-background-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .footer-social-item:hover,
 .footer-social-item:focus {
   background-color: var(--accent-text-color);
+}
+
+/* Modal Window */
+
+.backdrop {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.5);
+  z-index: 10;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* .backdrop.is-hidden .modal-window {
+  transform: scale(1.2);
+} */
+
+.modal-window {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--main-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 10;
+
+  /* transform: scale(1);
+  transition: transform 250ms var(--main-animation-cubic); */
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--main-background-color);
+}
+
+.modal-close-icon {
+  fill: #000;
+
+  transition: fill 500ms var(--main-animation-cubic), transform 500ms var(--main-animation-cubic);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: rgba(255, 0, 0, 0.8);
+  transform: rotate(180deg) scale(1.2);
 }
 
 /* Portfolio styles */
@@ -478,6 +595,10 @@ ul {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-animation-cubic);
 }
 
 .filter-button:hover,
@@ -506,7 +627,7 @@ ul {
   left: 0;
   width: 100%;
   height: 294px;
-  transform: translate(0, 100%);
+  transform: translateY(100%);
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.55;
@@ -514,10 +635,14 @@ ul {
   opacity: 0.9;
   color: var(--main-background-color);
   background-color: var(--accent-text-color);
+
+  transition: transform 250ms var(--main-animation-cubic);
 }
 
 .card-link {
   display: block;
+
+  transition: box-shadow 250ms var(--main-animation-cubic);
 }
 
 .card-link:hover,
@@ -550,45 +675,4 @@ ul {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--description-text-color);
-}
-
-.backdrop {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background: rgba(1, 1, 1, 0.5);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.modal-window {
-  position: absolute;
-  min-width: 528px;
-  min-height: 581px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--main-background-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.modal-close-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: var(--main-background-color);
-  fill: #000;
 }
