@@ -516,9 +516,7 @@ ul {
   background: rgba(1, 1, 1, 0.5);
   z-index: 10;
 
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--main-animation-cubic);
+  transition: opacity 250ms var(--main-animation-cubic);
 }
 
 .backdrop.is-hidden {
