@@ -408,7 +408,7 @@ ul {
   border-radius: 4px;
   fill: var(--social-icon-color);
 
-  transition-property: fill;
+  transition-property: fill, border;
   transition-duration: 250ms;
   transition-timing-function: var(--main-animation-cubic);
 }
@@ -521,13 +521,13 @@ ul {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   pointer-events: none;
 }
 
-/* .backdrop.is-hidden .modal-window {
-  transform: scale(1.2);
-} */
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(1.2) ;
+}
 
 .modal-window {
   position: absolute;
@@ -535,15 +535,14 @@ ul {
   min-height: 581px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   background: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 10;
 
-  /* transform: scale(1);
-  transition: transform 250ms var(--main-animation-cubic); */
+  transform:translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--main-animation-cubic);
 }
 
 .modal-close-button {
@@ -566,8 +565,8 @@ ul {
   transition: fill 500ms var(--main-animation-cubic), transform 500ms var(--main-animation-cubic);
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
   fill: rgba(255, 0, 0, 0.8);
   transform: rotate(180deg) scale(1.2);
 }
