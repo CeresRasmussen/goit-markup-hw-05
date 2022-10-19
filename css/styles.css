@@ -408,7 +408,7 @@ ul {
   border-radius: 4px;
   fill: var(--social-icon-color);
 
-  transition-property: fill, border;
+  transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--main-animation-cubic);
 }
@@ -557,6 +557,7 @@ ul {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--main-background-color);
+  cursor: pointer;
 }
 
 .modal-close-icon {
@@ -567,7 +568,7 @@ ul {
 
 .modal-close-button:hover .modal-close-icon,
 .modal-close-button:focus .modal-close-icon {
-  fill: rgba(255, 0, 0, 0.8);
+  fill: var(--accent-text-color);
   transform: rotate(180deg) scale(1.2);
 }
 
